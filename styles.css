@@ -1,0 +1,539 @@
+body, html {
+    margin: 0;
+    z-index: -1;
+    padding: 0;
+    height: 100%;
+    font-family: "SF Pro Text";
+    background-color:#0f172a;
+    scroll-behavior: smooth;
+}
+.college{
+  text-align: center;
+  font-size:15px;
+  margin-top: 0%;
+  color: white;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.secondelement{
+  text-align: center;
+  
+}
+.secondelement ul{
+  border: 2px solid white;
+  display: inline-block;
+  color: #ffffff; 
+  padding-right: 6%;
+  padding-left: 6%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  border-radius: 10%;
+}
+
+.secondelement ul li{
+  list-style: none;
+  position: relative;
+  cursor: pointer;
+}
+
+.secondelement ul li::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 1000px;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.35s ease-out;
+}
+
+.secondelement ul li:hover::after{
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+
+h1 {
+  font-size: 30px;
+  font-weight: 400;
+  text-decoration: none;
+  margin-bottom: 0%;
+  margin-top: 2%;
+}
+
+h1::before{
+  content: attr(data-text);
+}
+.wrapper {
+  display: flex;
+  margin-top: 400px;
+  gap: 1.2rem;
+  text-align: center;
+}
+
+.icon {
+  text-decoration: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 14px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.icon > i {
+  color: rgb(16, 27, 58);
+  font-size: 1.5rem;
+  transition: all 0.2s;
+}
+
+.icon:hover > i {
+  scale: 1.1;
+  color: #f1f1f1;
+}
+
+.icon:before {
+  background: var(--color);
+  content: "";
+  position:absolute;
+  width: 130%;
+  height: 130%;
+  left: -110%;
+  top: 80%;
+  transform: rotate(45deg);
+}
+
+.icon:hover:before {
+  animation: slides 0.7s forwards;
+}
+
+@keyframes slides {
+  50% {
+    left: 10%;
+    top: -40%;
+  }
+
+  100% {
+    left: -15%;
+    top: -15%;
+  }
+}
+
+.icon:has(.fa-instagram) {
+  --color: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
+}
+.icon:has(.fa-linkedin-in) {
+  --color: #0077b5;
+}
+.icon:has(.fa-youtube) {
+  --color: #ff0000;
+}
+.icon:has(.fa-x-twitter) {
+  --color: #1da1f2;
+}
+.icon:has(.fa-github) {
+  --color: #333;
+}
+
+
+a{
+  color:rgb(50, 236, 128);
+  opacity: 1;
+  text-decoration: none;
+}
+.about{
+  color: white;
+  opacity: 1;
+}
+
+.help{
+  position: absolute;
+  top: 13px;
+  right: 1.5%;
+  background: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid black;
+  
+}
+.help:is(:not(:hover)){
+  animation: shadowPulse 2s infinite;
+}
+.help:hover{
+  width:350px;
+  height:250px;
+  border-radius: 10px;
+}
+.help:hover .message{
+  opacity: 1;
+  transition: all 0.5s 0.5s ease;
+}
+.help:hover .question-mark{
+  display: none;
+}
+.message{
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.message-title{
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #212121;
+}
+
+.question-mark{
+  position: absolute;
+  object-fit: cover;
+
+
+}
+@keyframes shadowPulse {
+  0%{
+      box-shadow: 0 0 20px rgb(255, 255, 255);
+  }
+  50%{
+      box-shadow: 0 0 15px rgba(2, 2, 2, 0.868);
+  }
+  100%{
+      box-shadow: 0 0 20px rgb(255, 255, 255);
+  }
+}
+
+.colorborder{
+  border: 4px solid;
+  --angle: 0deg;
+  border-image: conic-gradient(
+    from var(--angle),
+    #f37055,#ef4e7b,#a166ab,#5073b8,#1098ad,#6fba82,#f37055)1;
+    animation: 3s rotate linear infinite;
+}
+
+.innercontainer{
+  display: grid;
+  text-align: center;
+  height:auto;
+}
+ul{
+  padding: 0%;
+}
+.gridd{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  display: grid;
+  color: rgb(255, 255, 255);
+  grid-template-columns: 1fr 1fr;
+}
+
+@keyframes rotate{
+  to{
+    --angle: 360deg;
+  }
+}
+
+@property --angle{
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.brand-list{
+  overflow: hidden;
+  width: 99%;
+}
+
+.wrap{
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 20%;
+  justify-items: stretch;
+  animation: slide 15s linear infinite;
+}
+
+.wrap img{
+  width: 80%;
+  height: 100%;
+  border-radius: 15px;
+  object-fit:contain;
+
+}
+
+@keyframes slide{
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.container{
+  display: flex;
+  gap: 10px; /* Space between the elements */
+  height: 100vh; /* Full height of the viewport */
+  padding: 10px;
+}
+
+.fixed-column {
+  padding-left: 5%;
+  width: 50%; /* Adjust width as needed */
+  position: fixed;
+  top: 10%; /* Distance from the top */
+  margin: 0;
+  height: auto;
+}
+
+.scrollable-column {
+  width: 50%; /* Adjust width as needed */
+  margin-left: 50%; /* Ensure the normal column does not overlap the fixed column */
+  padding-top: 5%;
+  padding-right: 20%;
+  padding-left: 5%;
+  overflow-y: auto; /* Add scroll if content overflows */
+  height: 100vh; /* Full height of the viewport */
+}
+
+@media (max-width: 948px){
+  .scrollable-column{
+    padding-right:5%;
+    padding-left: 10%;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    padding-top: 0%;
+    margin-top: 10%;
+  }
+  .container{
+    padding-left: 0%;
+    padding-right:0%;
+  };
+  .help:hover .message{
+    z-index: 1000;
+  }
+  
+  .fixed-column {
+    padding-left: 0%;
+    width: 100%;
+    justify-items: center;
+    align-items: center;
+    position: absolute;
+    height: auto;
+    order: 1;
+    text-align: center;
+  }
+  
+  .scrollable-column {
+    position: absolute;
+    width: 50%; /* Adjust width as needed */
+    margin-top: 90%; /* Ensure the normal column does not overlap the fixed column */
+    margin-left: 14%;
+    padding-top: 10%;
+    padding-right: 5%;
+    overflow-y: auto; /* Add scroll if content overflows */
+    height: 100vh;
+    order: 2;
+  }
+}
+
+/*FONTS*/
+.ubuntu-light {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 1px;
+}
+.space-grotesk{
+  font-family: "Space Grotesk", sans-serif;
+  letter-spacing: 1px;
+  font-weight: 200;
+  font-size: 10px;
+}
+.barlow-semibold {
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+.remfont {
+  font-family: "REM", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.containercard {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px 15px; /* Further reduced gap */
+  padding: 25px 15px; /* Further reduced padding */
+}
+
+.containercard .custom-card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 200px; /* Further reduced width */
+  max-width: 100%;
+  height: 150px; /* Further reduced height */
+  background: #000000;
+  border-radius: 10px; /* Further reduced border-radius */
+  transition: 0.5s;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15); /* Adjusted shadow */
+}
+
+.containercard .custom-card:hover {
+  height: 250px; /* Adjusted hover height */
+}
+
+.containercard .custom-card .img-box {
+  position: absolute;
+  border: 2px solid white;
+  top: 10px; /* Adjusted position */
+  width: 100px; /* Further reduced width */
+  height: 100px; /* Further reduced height */
+  background: #ffffff;
+  border-radius: 8px; /* Further reduced border-radius */
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.containercard .custom-card:hover .img-box {
+  top: -60px; /* Adjusted hover position */
+  scale: 0.75;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Adjusted shadow */
+}
+
+.containercard .custom-card .img-box img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit:contain;
+}
+
+.containercard .custom-card .custom-content {
+  position: absolute;
+  top: 120px; /* Adjusted position */
+  width: 100%;
+  height: 30px; /* Adjusted height */
+  padding: 0 15px; /* Adjusted padding */
+  text-align: center;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.containercard .custom-card:hover .custom-content {
+  top: 80px; /* Adjusted hover position */
+  height: 170px; /* Adjusted hover height */
+}
+
+.containercard .custom-card .custom-content h2 {
+  font-size: 1rem; /* Further reduced font-size */
+  font-weight: 700;
+  color: #ffffff;
+}
+h2{
+  margin-top: 0;
+}
+.containercard .custom-card .custom-content p {
+  color: #fffefe;
+  font-size: 0.8rem; /* Further reduced font-size */
+}
+
+.containercard .custom-card .custom-content a {
+  position: relative;
+  display: inline-block;
+  padding: 8px; /* Adjusted padding */
+  text-decoration: none;
+  background: #fcfcfc;
+  color: #000000;
+  font-weight: 500;
+  font-size: 0.8rem; /* Further reduced font-size */
+}
+
+.containercard .custom-card .custom-content a:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 480px) {
+  .containercard .custom-card {
+      width: 130px; /* Further adjusted width for small screens */
+      border-radius: 8px; /* Reduced border-radius */
+  }
+
+  .containercard .custom-card .img-box {
+      width: 120px; /* Further adjusted width for small screens */
+      border-radius: 6px; /* Reduced border-radius */
+  }
+
+  .containercard .custom-card .custom-content p {
+      font-size: 0.6rem; /* Further reduced font-size */
+  }
+
+  .containercard .custom-card .custom-content a {
+      font-size: 0.7rem; /* Further reduced font-size */
+  }
+}
+
+.cursor-gradient {
+  position: fixed;
+  width: 1500px; /* Increased width */
+  height: 1500px; /* Increased height */
+  pointer-events: none; /* Ensure the div does not interfere with cursor events */
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(16, 27, 58, 0) 40%); /* Semi-transparent white */
+  mix-blend-mode: overlay; /* Blend mode to create a smooth blending effect */
+  z-index: 0; /* Place behind all other elements */
+  opacity: 0.5; /* Adjust opacity as needed */
+}
+
+.bord{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.gradient-text {
+  font-weight: bold;
+  background: linear-gradient(90deg, #ff6b6b, #f0e130, #6bffb8, #6b6bff, #f06bff);
+  background-size: 400% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: gradient-animation 8s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}

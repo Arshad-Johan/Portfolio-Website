@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techiadz 2023</title>
+    <style>
+        body {
+            background-color: gray;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .centered-div {
+            width: 90%;
+            height: 90%;
+            padding: 2px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden; /* Ensures the image does not overflow */
+        }
+
+        .centered-div img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.5);
+            margin:5%;
+            object-fit: contain; /* Ensures the image scales properly within the div */
+        }
+    </style>
+    <link rel="icon" href="./techiadz.jpeg" type="image/jpg">
+
+</head>
+<body>
+    <div class="centered-div">
+        <img src="./techiadz.jpeg" alt="techiadz 2023">
+    </div>
+</body>
+</html>
