@@ -38,7 +38,7 @@
           <h3 class="college barlow-semibold textleft" style="padding-top: 1%; font-size: 18px;">
             Student, PSG College of Technology
           </h3>
-          <p style ="color: white; font-size: 15px; margin-top: 3%;" class="space-grotesk textleft">Pursuing Theoretical Computer Science degree<br>and a Frontend developer.</p>
+          <p style ="color: white; font-size: 15px; margin-top: 3%;" class="space-grotesk textleft">Pursuing Theoretical Computer Science<br>Frontend Developer</p>
        </div>
       </div>
       <div class="secondelement ubuntu-light">
@@ -61,7 +61,8 @@
     
     <div class="scrollable-column innercontainer" style="overflow-y:visible;">
       <div class="about barlow-semibold" style="margin-top: 5%;padding: 3%;">
-        <p style="margin: 0%;font-size: 20px;">Back in 2023, I used to create websites in <span><a href="https://www.canva.com/" target="_blank">Canva</a></span> and realised the amount of happiness I get once the project is completed. Thats how I developed interest in the rabbit hole of web development. Still learning, happy to collaborate with different web projects!</p>
+        <p style="margin: 0%;font-size: 20px;">
+      I am a passionate and dedicated individual with a keen interest in the field of web development. My journey began in 2023 when I started creating websites using Canva, and since then, I have been continuously striving to enhance my skills and knowledge. Currently, I am pursuing an Integrated MSc in Theoretical Computer Science at PSG College of Technology, Coimbatore. My academic background has provided me with a strong foundation in computer science principles, which I apply to my web development projects. I am proficient in various programming languages and tools, and I enjoy working on both frontend and backend development. My goal is to create innovative and user-friendly web solutions that make a positive impact. I am always eager to learn new technologies and collaborate with others to bring creative ideas to life.</p>
       </div>
       <div class="about  barlow-semibold" style="text-align: center; margin-top: 5%; padding: 2%;">
         <p class="bord gradient-text" style="font-size: 25px; margin-bottom: 5%; font-style: italic;">Languages learnt</p>
@@ -161,8 +162,70 @@
       <div>
         <div class="gradient-text about bord" style="font-size: 25px;margin-top: 10%;"></div>
       </div>
+
+    <!-- Deployed Projects Section -->
+    <div class="containercard projects-section" style="display: flex; flex-direction: column; align-items: center;">
+      <p class="about bord gradient-text" style="font-size: 25px; margin-bottom: 0%; font-style: italic; ">Deployed Projects</p>
+      <div class="custom-card">
+          <div class="img-box"><img src="./icon.jpg"></div>
+          <div class="custom-content">
+              <h2>Portfolio Website</h2>
+              <p>DESCRIPTION:<br> My very own portfolio which u are currently viewing</p>
+              <a href="https://arshadjohan.vercel.app" target="_blank">VIEW</a>
+          </div>
+      </div>
+
+      <div class="custom-card">
+          <div class="img-box"><img src="./bg-8.png"></div>
+          <div class="custom-content">
+              <h2>Car Rental Website</h2>
+              <p>DESCRIPTION:<br>The only place for easy peasy car rentals from verified owners</p>
+              <a href="https://car-rental-system-ylr9.onrender.com" target="_blank">VIEW</a>
+          </div>
+      </div>
     </div>
 
+    <!-- GitHub Projects Section -->
+    <div class="containercard projects-section" style="margin-top: 10%; display: flex; flex-direction: column; align-items: center;">
+      <p class="about bord gradient-text" style="font-size: 25px; margin-bottom: 0%; font-style: italic; ">GitHub Projects</p>
+      <div class="custom-card">
+          <div class="img-box"><img src="./mhi.jpg"></div>
+          <div class="custom-content">
+              <h2>PSG-MHI Project</h2>
+              <p>DESCRIPTION:<br> Currently doing a full stack website for PSG - Ministry of Heavy Industries. Waiting for future deployment.</p>
+              <a href="https://github.com/Arshad-Johan/PSG-MHI-Project" target="_blank">VIEW</a>
+          </div>
+      </div>
+      <div class="custom-card">
+        <div class="img-box"><img src="./fake-news.jpg"></div>
+        <div class="custom-content">
+            <h2>Fake News Detection</h2>
+            <p>DESCRIPTION:<br>The system leverages both traditional ML techniques (TF-IDF and ensemble models) and an LSTM-based neural network for classification.</p>
+            <a href="https://github.com/Arshad-Johan/Fake-News-Detection" target="_blank">VIEW</a>
+        </div>
+    </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="containercard contact-section" style="margin-bottom: 10px;">
+      <h2 class="gradient-text">Contact Me</h2>
+      <form action="https://formspree.io/f/xjkggroy" method="POST">
+          <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Send</button>
+      </form>
+    </div>
+    
   </div>    
     <script src="index.js"></script>
 </body>
